@@ -6,3 +6,7 @@ Simple API using Slim v4 MySQL
 
 - Create `.env` from `.env.exemple`
 - Update environement variable
+
+docker-compose exec php composer install
+
+docker-compose exec php composer require lukasoppermann/http-status
