@@ -1,3 +1,6 @@
+import './style.scss';
+console.log('Vite is running');
+
 const modal = document.querySelector('#modal-wrapper');
 const modalContent = document.querySelector('#modal-content');
 const modalTitle = document.querySelector('#modal-title');
