@@ -3,10 +3,10 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 use App\Model\Personne;
-
+$faker = Faker\Factory::create('fr_FR');
 $personne = new Personne();
-$personne->setPrenom('Albert');
-$personne->setNom('Mudha');
+$personne->setPrenom($faker->firstName());
+$personne->setNom($faker->lastName());
 $personne->setAge(42);
 $personne->setAdresse('1 rue de la Paix');
 $personne->setVille('Paris');
