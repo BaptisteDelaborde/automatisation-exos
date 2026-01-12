@@ -43,3 +43,11 @@ Par défaut, ces commandes purgent la base avant de recréer un jeu de données.
 **Bonnes pratiques**
 - Créer des fonctions pour chaque type d’entité (générer une personne, une société, un article, etc.).  
 - Cela simplifie le code, améliore la lisibilité et facilite les évolutions.
+
+
+La commande de génération doit être exécutée **dans le conteneur PHP** :
+
+```bash
+docker exec -it automatisation-exercice-2-td-php-1 bash
+
+php bin/console db:populate
