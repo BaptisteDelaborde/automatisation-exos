@@ -46,27 +46,27 @@ class PopulateDatabaseCommand extends Command
         $companiesCount = rand(2, 4);
 
         for ($i = 0; $i < $companiesCount; $i++) {
-            $company = \App\Models\Company::create([
-            'name'    => $faker->company,
-            'phone'   => $faker->phoneNumber,
-            'email'   => $faker->companyEmail,
-            'website' => $faker->url,
-            ]);
+            $company = new Company();
+            $company->name = $faker->company;
+            $company->phone = $faker->phoneNumber;
+            $company->email = $faker->companyEmail;
+            $company->website = $faker->url;
+            $company->save();
 
             // 2 à 3 bureaux par société
             $offices = [];
             $officesCount = rand(2, 3);
 
             for ($j = 0; $j < $officesCount; $j++) {
-                $office = \App\Models\Office::create([
-                    'name'       => 'Bureau ' . $faker->city,
-                    'address'    => $faker->streetAddress,
-                    'city'       => $faker->city,
-                    'zip_code'   => $faker->postcode,
-                    'country'    => $faker->country,
-                    'email'      => $faker->optional()->companyEmail,
-                    'company_id' => $company->id,
-                ]);
+                $office = new Office();
+                $office->name = 'Bureau ' . $faker->city;
+                $office->address = $faker->streetAddress;
+                $office->city = $faker->city;
+                $office->zip_code = $faker->postcode;
+                $office->country = $faker->country;
+                $office->email = $faker->optional()->companyEmail;
+                $office->company_id = $company->id;
+                $office->save();
 
                 $offices[] = $office;
             }
@@ -80,14 +80,13 @@ class PopulateDatabaseCommand extends Command
 
             for ($k = 0; $k < $employeesCount; $k++) {
                 $office = $faker->randomElement($offices);
-
-                \App\Models\Employee::create([
-                'first_name' => $faker->firstName,
-                'last_name'  => $faker->lastName,
-                'office_id'  => $office->id,
-                'email'      => $faker->unique()->safeEmail,
-                'job_title'  => $faker->jobTitle,
-                ]);
+                $employee = new Employee();
+                $employee->first_name = $faker->firstName;
+                $employee->last_name = $faker->lastName;
+                $employee->email = $faker->unique()->safeEmail;
+                $employee->job_title = $faker->jobTitle;
+                $employee->office_id = $office->id;
+                $employee->save();
             }
         }
 
