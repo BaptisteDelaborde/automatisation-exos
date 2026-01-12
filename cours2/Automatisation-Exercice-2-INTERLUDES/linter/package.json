@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "demo de eslint",
   "scripts": {
-    "lint": "eslint . --ext .js --ignore-path .gitignore "
+    "lint": "eslint .--fix --ext .js --ignore-path .gitignore "
   },
   "author": "",
   "license": "ISC",

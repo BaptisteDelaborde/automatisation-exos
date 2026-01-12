@@ -1,26 +1,34 @@
 <?php
 
+namespace Cours2\AutomatisationExercice2Interludes\Linter\Php;
 
+class MauvaisCode
+{
+    public string $message;
 
- class MauvaisCode{
-public $message;
+    public function __construct(?string $message = null)
+    {
+        if ($message) {
+            $this->message = $message;
+        } else {
+            $this->message = 'Mauvais code';
+        }
+    }
 
-function __construct($message) {
-    if ($message) {
+    public function setMessage(string $message): void
+    {
         $this->message = $message;
-    } else {
-        $this->message = 'Mauvais code';
     }
-}
 
-function setMessage($message) {
-    $this->message = $message;
-}
-function mauvaisCode($inUpperCase) {
-    if ($inUpperCase) {
-        echo ucfirst('mauvais code');
-    } else {
-        echo 'mauvais code';
+    /**
+     * Cette fonction n'est pas utilisée.
+     */
+    public function mauvaisCode(bool $inUpperCase): void
+    {
+        if ($inUpperCase) {
+            echo strtoupper('mauvais code');
+        } else {
+            echo 'mauvais code';
+        }
     }
 }
- }
