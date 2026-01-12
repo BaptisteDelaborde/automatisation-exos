@@ -14,6 +14,14 @@ class Company extends Model
 {
     protected $table = 'companies';
 
+    protected $fillable = [
+        'name',
+        'phone',
+        'email',
+        'website',
+        'logo',
+        'head_office_id',
+    ];
 
     public function offices(): HasMany
     {

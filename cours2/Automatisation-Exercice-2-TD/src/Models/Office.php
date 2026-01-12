@@ -9,6 +9,16 @@ class Office extends Model
 {
     protected $table = 'offices';
 
+    protected $fillable = [
+        'name',
+        'address',
+        'city',
+        'zip_code',
+        'country',
+        'email',
+        'company_id',
+    ];
+
     public function employees()
     {
         return $this->hasMany(Employee::class);
