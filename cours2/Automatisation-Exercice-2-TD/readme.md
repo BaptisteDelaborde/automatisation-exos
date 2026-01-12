@@ -45,6 +45,13 @@ docker compose exec php bin/console db:create
 docker compose exec php bin/console db:populate 
 ```
 
+Ou en entrant dans le conteneur PHP :
+```bash
+docker exec -it automatisation-exercice-2-td-php-1 bash
+
+php bin/console db:populate
+```
+
 ## Structure du projet
 - **bin** : Contient le script permettant de lancer des commandes. 
 - **config** : Contient les fichiers de configuration de l'application.
