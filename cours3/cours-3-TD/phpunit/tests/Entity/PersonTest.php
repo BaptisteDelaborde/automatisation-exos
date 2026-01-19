@@ -9,16 +9,20 @@ use PHPUnit\Framework\TestCase;
 
 class PersonTest extends TestCase {
 
+    private $person1;
+
+    public function setUp(): void {
+        $this->person1 = new Person('Burak', 'EUR'); 
+    }
+
     public function testConstructorInitializesName(): void {
-        $person = new Person('Burak', 'EUR');
-        $this->assertSame('Burak', $person->getName());
+        $this->assertSame('Burak', $this->person1->getName());
     }
 
     public function testConstructorInitializesWallet(): void {
-        $person = new Person('Burak', 'EUR');
-        $this->assertInstanceOf(Wallet::class, $person->getWallet());
-        $this->assertSame('EUR', $person->getWallet()->getCurrency());
-        $this->assertSame(0.0, $person->getWallet()->getBalance());
+        $this->assertInstanceOf(Wallet::class, $this->person1->getWallet());
+        $this->assertSame('EUR', $this->person1->getWallet()->getCurrency());
+        $this->assertSame(0.0, $this->person1->getWallet()->getBalance());
     }
 
     public function testSetNameUpdatesName(): void {
