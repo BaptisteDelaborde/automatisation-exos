@@ -11,8 +11,14 @@ export default mergeConfig(
       root: fileURLToPath(new URL('./', import.meta.url)),
       coverage: {
         provider: 'istanbul', // or 'v8'
-        reporter: ['html']
-        // Todo : completer la configuration
+        reporter: ['html'],
+          exclude: [
+              ...configDefaults.coverage.exclude || [],
+              'src/components/icons/**\',\n' +
+              'src/components/icons/**',
+              'src/components/Welcome*.vue',
+              'src/main.js'
+          ]
       }
     }
   })
