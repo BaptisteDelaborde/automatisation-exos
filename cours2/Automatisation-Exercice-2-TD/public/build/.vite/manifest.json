@@ -1,0 +1,11 @@
+{
+  "script.js": {
+    "file": "assets/app-Cdl46qUF.js",
+    "name": "app",
+    "src": "script.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-CeLTbpzN.css"
+    ]
+  }
+}
