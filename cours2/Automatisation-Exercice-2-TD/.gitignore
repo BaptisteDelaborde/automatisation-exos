@@ -7,5 +7,5 @@
 /.idea
 
 # Docker / MySQL data (NE JAMAIS VERSIONNER)
-cours2/Automatisation-Exercice-2-TD/docker/db_data/
+docker/db_data/
 **/docker/db_data/
