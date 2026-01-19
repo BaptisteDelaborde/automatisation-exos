@@ -63,7 +63,7 @@ class PersonTest extends TestCase {
         $this->expectException(\Exception::class);
         $burak = new Person('burak', 'EUR');
         $arman = new Person('arman', 'USD');
-        $alice->transfertFund(10, $bob);
+        $burak->transfertFund(10, $arman);
     }
 
     public function testDivideWalletSplitsBalanceBetweenPersons(): void {
@@ -102,5 +102,5 @@ class PersonTest extends TestCase {
         $person->buyProduct($product);
     }
 
-    
+
 }
