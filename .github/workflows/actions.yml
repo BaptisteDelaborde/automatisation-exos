@@ -18,10 +18,10 @@ jobs:
         echo "cp .env"
         cp .env.ci .env
     - name: Install Dependencies
-      run: php composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+      run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
     - name: Execute tests (Unit and Feature tests) via PHPUnit
-      run: php composer run test
+      run: composer run test
       continue-on-error: false
     - name: Execute linter phpstan
-      run: php composer run phpstan
+      run: composer run phpstan
       continue-on-error: false
