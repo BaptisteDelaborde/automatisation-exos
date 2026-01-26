@@ -17,9 +17,9 @@ jobs:
         echo "cp .env"
         cp cours4/td_backend/.env.ci .env
     - name: Install Dependencies
-      run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+      run: cours4/td_backend/composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
     - name: Execute tests (Unit and Feature tests) via PHPUnit
-      run: composer run test
+      run: cours4/td_backend/composer run test
       continue-on-error: false
     - name: Execute linter phpstan
       run: composer run phpstan
