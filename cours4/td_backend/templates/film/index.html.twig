@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des films{% endblock %}
+
+{% block body %}
+<h1>Liste des films</h1>
+
+{% for film in films %}
+    <div>
+        <h2>{{ film.titre }}</h2>
+        <p>Année: {{ film.annee }}</p>
+        <p>Durée: {{ film.duree }} minutes</p>
+        <p>Réalisateur: {{ film.realisateur ? film.realisateur.nom : 'Non renseigné' }}</p>
+    </div>
+{% endfor %}
+{% endblock %}

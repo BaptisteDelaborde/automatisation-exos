@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des réalisateurs{% endblock %}
+
+{% block body %}
+<h1>Liste des réalisateurs</h1>
+
+{% for realisateur in realisateurs %}
+    <div>
+        <h2>{{ realisateur.nom }}</h2>
+        <p>Films:</p>
+        <ul>
+            {% for film in realisateur.films %}
+                <li>{{ film.titre }} ({{ film.annee }})</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endfor %}
+{% endblock %}

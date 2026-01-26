@@ -1,4 +1,4 @@
-# Projet Vide
+# Projet Vide .
 ## Installation
 
 ```bash
@@ -12,12 +12,20 @@ docker compose up
 => http://localhost:8080
 
 ## Initialisation de la base de données + Peuplement
-```bash
-# Todo...
-````
 
-## Accès aux vues :
-// TODO ...
+Pour initialiser la base de données et peupler les données de test, exécutez les 2 commandes suivantes :
+
+```bash
+docker compose exec php php bin/console doctrine:migrations:migrate
+docker compose exec php php bin/console doctrine:fixtures:load
+```
+
+## Accès aux vues
+
+Une fois le projet démarré et les données initialisées, vous pouvez accéder aux vues suivantes :
+
+- **Liste des films** : http://localhost:8080/film
+- **Liste des réalisateurs** : http://localhost:8080/realisateur
 
 ---
 
