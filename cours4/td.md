@@ -12,7 +12,7 @@ Lire les conseils ci dessous avant de commencer + lire le cours associé.
 
 1. **Prendre en main les Makers** (1h)
    - [ ] Générer les classes nécessaires au projet : 
-      - [ ] Les _entités_ correspondantes. Ajoutez quelques champs très basiques.  Il doit y avoir une relation entre Réalisateur et Film.
+      - [x] Les _entités_ correspondantes. Ajoutez quelques champs très basiques.  Il doit y avoir une relation entre Réalisateur et Film.
       - [ ] Les _controlleurs_ associés, et leurs vues twig. Vous devez pouvoir accéder aux vues via les routes générées.
       - [ ] Le fichier de _migration_ & executer la migration pour initialiser la base avec les bonnes tables.
       - [ ] Une (une seule !) _fixture_ qui peuplera les deux entités (et leur relation) - utiliser FakerPHP pour avoir des données aléatoires. Executer cette fixture pour insérer les données en base.
