@@ -12,5 +12,15 @@ jobs:
       with:
         php-version: '8.3'
     - uses: actions/checkout@v4
-    - name: ECHO FOR TEST
-      run: echo "FICHIER DE CI / CD BIEN EXECUTE"
+    - name: Copy .env.
+      run: |
+        echo "cp .env"
+        cp .env.ci .env
+    - name: Install Dependencies
+      run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+    - name: Execute tests (Unit and Feature tests) via PHPUnit
+      run: composer run test
+      continue-on-error: false
+    - name: Execute linter phpstan
+      run: composer run phpstan
+      continue-on-error: false
