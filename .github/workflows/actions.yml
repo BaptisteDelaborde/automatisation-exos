@@ -1,0 +1,16 @@
+name: actions
+
+on:
+  push:
+    branches: [ "feature_4" ]
+
+jobs:
+  workflow:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.3'
+    - uses: actions/checkout@v4
+    - name: ECHO FOR TEST
+      run: echo "FICHIER DE CI / CD BIEN EXECUTE"
