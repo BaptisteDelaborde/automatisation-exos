@@ -15,7 +15,7 @@ jobs:
     - name: Copy .env.
       run: |
         echo "cp .env"
-        cp .env.ci .env
+        cp cours4/td_backend/.env.ci .env
     - name: Install Dependencies
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
     - name: Execute tests (Unit and Feature tests) via PHPUnit
