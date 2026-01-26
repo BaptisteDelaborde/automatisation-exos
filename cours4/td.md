@@ -11,11 +11,11 @@ Prérequis : installer le projet (voir README.md du dossier td_backend).
 Lire les conseils ci dessous avant de commencer + lire le cours associé.
 
 1. **Prendre en main les Makers** (1h)
-   - [ ] Générer les classes nécessaires au projet : 
+   - [x] Générer les classes nécessaires au projet : 
       - [x] Les _entités_ correspondantes. Ajoutez quelques champs très basiques.  Il doit y avoir une relation entre Réalisateur et Film.
-      - [ ] Les _controlleurs_ associés, et leurs vues twig. Vous devez pouvoir accéder aux vues via les routes générées.
-      - [ ] Le fichier de _migration_ & executer la migration pour initialiser la base avec les bonnes tables.
-      - [ ] Une (une seule !) _fixture_ qui peuplera les deux entités (et leur relation) - utiliser FakerPHP pour avoir des données aléatoires. Executer cette fixture pour insérer les données en base.
+      - [x] Les _controlleurs_ associés, et leurs vues twig. Vous devez pouvoir accéder aux vues via les routes générées.
+      - [x] Le fichier de _migration_ & executer la migration pour initialiser la base avec les bonnes tables.
+      - [x] Une (une seule !) _fixture_ qui peuplera les deux entités (et leur relation) - utiliser FakerPHP pour avoir des données aléatoires. Executer cette fixture pour insérer les données en base.
    - [ ] Modifier les vues pour remonter les données (de maniere très basique, pas de mise en forme css etc., juste du brut pour l'exemple)
    - [ ] Bonne pratique : Indiquer dans le readme du projet comment initialiser les données, ainsi que l'url des 2 vues. => Mettez vous a la place d'un nouveau développeur qui arrive sur le projet : il n'aura pas à rééxecuter tout ce que vous venez de faire, uniquement 2 commandes précises, c'est celles ci qu'il faudra m'indiquer.
    
